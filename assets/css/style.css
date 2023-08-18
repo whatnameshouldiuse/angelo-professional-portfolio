@@ -3,7 +3,7 @@
 :root {
     --bg-color: rgb(238, 238, 238);
     --maroon: rgb(95, 12, 26);
-    --lavender: rgb(193, 180, 214);
+    --lavender: rgb(212, 196, 238);
 }
 
 * {
@@ -68,6 +68,7 @@ header#Landing nav a {
     padding: 10px 20px;
     margin: 0 20px;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 header#Landing nav a:before,
@@ -119,32 +120,118 @@ header#Landing nav a:hover {
     margin-right: -50%;
 }
 
+/* Flex styling */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Work Section styling */
+
+section#Works article,
+section#Works div {
+    margin: 2rem auto;
+}
+
+.work-card {
+    width: 40%;
+    flex: 0 0 40%;
+    height: 300px;
+    border: solid 10px var(--maroon);
+}
+
+.work-card.featured {
+    width: 80%;
+    flex: 1 0 100%
+}
+
+@media screen and (max-width: 992px) {
+    .work-card {
+        width: 80%;
+        flex: 1 0 100%;
+    }
+}
+
+.work-card-img {
+    height: 100%;
+    width: 100%;
+}
+
+.work-card h3 {
+    font-size: 25px;
+    padding: 1rem;
+    color: var(--lavender);
+    background-color: var(--maroon);
+    position: relative;
+    margin-top: -3rem;
+}
+
 /* Work Placeholder Images */
 
 .work-card-img.module1 {
-    background-image: url("../digital-marketing-meeting.jpg")
+    background-image: url("../digital-marketing-meeting.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .work-card-img.ph1 {
-    background-image: url("../ph_01.jpg")
+    background-image: url("../ph_01.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .work-card-img.ph2 {
-    background-image: url("../ph_02.jpg")
+    background-image: url("../ph_02.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .work-card-img.ph3 {
-    background-image: url("../ph_03.jpg")
+    background-image: url("../ph_03.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .work-card-img.ph4 {
-    background-image: url("../ph_04.jpg")
+    background-image: url("../ph_04.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .work-card-img.ph5 {
-    background-image: url("../ph_05.jpg")
+    background-image: url("../ph_05.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .work-card-img.ph6 {
-    background-image: url("../ph_06.jpg")
+    background-image: url("../ph_06.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Work Section Cards Interaction */
+
+.work-card,
+.work-card .work-card-img,
+.work-card h3 {
+    transition: all 0.3s ease-in-out;
+}
+
+.work-card:hover {
+    border-color: var(--lavender);
+    cursor: pointer;
+}
+
+.work-card:hover .work-card-img{
+    background-color: rgba(128, 0, 0, 0.493);
+    background-blend-mode: multiply;
+}
+
+.work-card:hover h3 {
+    color: var(--maroon);
+    background-color: var(--lavender);
 }
