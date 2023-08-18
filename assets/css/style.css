@@ -1,0 +1,78 @@
+/* Global Styles */
+
+:root {
+    --bg-color: rgb(216, 216, 216);
+    --maroon: rgb(95, 12, 26);
+    --lavender: rgb(193, 180, 214);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+/* Main sections overall formatting */
+
+.section-header {
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 30px;
+    color: var(--maroon);
+    padding: 0 10px;
+}
+
+.section-header h2:before,
+.section-header h2:after {
+    background-color: var(--maroon);
+    content: "";
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 20%;
+}
+
+.section-header h2:before {
+    right: 0.5rem;
+    margin-left: -50%;
+}
+
+.section-header h2:after {
+    left: 0.5rem;
+    margin-right: -50%;
+}
+
+/* Work Placeholder Images */
+
+.work-card-img.module1 {
+    background-image: url("../digital-marketing-meeting.jpg")
+}
+
+.work-card-img.ph1 {
+    background-image: url("../ph_01.jpg")
+}
+
+.work-card-img.ph2 {
+    background-image: url("../ph_02.jpg")
+}
+
+.work-card-img.ph3 {
+    background-image: url("../ph_03.jpg")
+}
+
+.work-card-img.ph4 {
+    background-image: url("../ph_04.jpg")
+}
+
+.work-card-img.ph5 {
+    background-image: url("../ph_05.jpg")
+}
+
+.work-card-img.ph6 {
+    background-image: url("../ph_06.jpg")
+}
