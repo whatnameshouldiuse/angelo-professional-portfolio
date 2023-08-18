@@ -1,7 +1,7 @@
 /* Global Styles */
 
 :root {
-    --bg-color: rgb(238, 238, 238);
+    --bg-color: rgb(233, 236, 238);
     --maroon: rgb(95, 12, 26);
     --lavender: rgb(212, 196, 238);
 }
@@ -12,6 +12,7 @@
 
 body {
     background-color: var(--bg-color);
+    font-family: 'Verdana', 
 }
 
 /* Landing Header Styling */
@@ -54,9 +55,22 @@ header#Landing {
     font-size: 18px;
 }
 
+@media screen and (max-width: 960px){
+    .landing-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .landing-main div {
+        justify-content: center;
+    }
+}
+
 /* Landing Header, floating Nav Bar */
 
 header#Landing nav {
+    display: flex;
     text-align: center;
     margin: 40px 0;
 }
@@ -66,9 +80,10 @@ header#Landing nav a {
     font-weight: bold;
     font-size: 20px;
     padding: 10px 20px;
-    margin: 0 20px;
+    margin: 0 auto;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
+    flex-wrap: nowrap;
 }
 
 header#Landing nav a:before,
@@ -81,6 +96,12 @@ header#Landing nav a:after {
     vertical-align: middle;
     width: 30px;
     margin: 0 10px;
+}
+
+@media screen and (max-width: 1070px) {
+    header#Landing nav {
+        flex-direction: column;
+    }
 }
 
 header#Landing nav a:hover {
@@ -131,6 +152,10 @@ header#Landing nav a:hover {
 
 /* Work Section styling */
 
+section#Works {
+    margin: 20vh 0;
+}
+
 section#Works article,
 section#Works div {
     margin: 2rem auto;
@@ -141,6 +166,7 @@ section#Works div {
     flex: 0 0 40%;
     height: 300px;
     border: solid 10px var(--maroon);
+    position: relative;
 }
 
 .work-card.featured {
@@ -151,8 +177,16 @@ section#Works div {
 @media screen and (max-width: 992px) {
     .work-card {
         width: 80%;
-        flex: 1 0 100%;
+        flex: 0 0 80%;
     }
+}
+
+.work-card a {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .work-card-img {
@@ -223,7 +257,6 @@ section#Works div {
 
 .work-card:hover {
     border-color: var(--lavender);
-    cursor: pointer;
 }
 
 .work-card:hover .work-card-img{
@@ -234,4 +267,76 @@ section#Works div {
 .work-card:hover h3 {
     color: var(--maroon);
     background-color: var(--lavender);
+}
+
+/* Contact Section Styling */
+
+section#Contact {
+    margin: 20vh 0;
+}
+
+section#Contact div {
+    margin: 3rem 0;
+}
+
+.contact-card {
+    padding: .7rem .4rem;
+    flex: 0 1 20%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-card h3{
+    font-size: 22px;
+    color: var(--maroon)
+}
+
+.contact-card hr {
+    width: 70%;
+    border: solid 1px var(--maroon);
+    margin: 5px auto;
+}
+
+.contact-card p {
+    font-size: 18px;
+    color: var(--maroon);
+}
+
+.contact-card:hover {
+    background-color: var(--lavender);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+    .contact-card {
+        flex: 0 1 40%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .contact-card {
+        flex: 0 1 80%;
+    }
+}
+
+/* Footer styling */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+footer img {
+    display: block;
+    max-width: 70px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
+
+footer h4 {
+    margin: 2rem 0;
+    color: var(--maroon);
 }
