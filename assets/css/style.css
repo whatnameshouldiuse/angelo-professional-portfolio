@@ -1,7 +1,7 @@
 /* Global Styles */
 
 :root {
-    --bg-color: rgb(216, 216, 216);
+    --bg-color: rgb(238, 238, 238);
     --maroon: rgb(95, 12, 26);
     --lavender: rgb(193, 180, 214);
 }
@@ -14,7 +14,79 @@ body {
     background-color: var(--bg-color);
 }
 
-/* Main sections overall formatting */
+/* Landing Header Styling */
+
+header#Landing {
+    display: block;
+    width: 60%;
+    margin: 35vh auto;
+}
+
+/* Landing Header main content, Avatar + About Me */
+
+.landing-main {
+    display: flex;
+    justify-content: center;
+}
+
+.landing-main img {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+.landing-main div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.landing-main div h1 {
+    font-size: 40px;
+    color: var(--maroon);
+    margin: 10px 0;
+}
+
+.landing-main div p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+
+/* Landing Header, floating Nav Bar */
+
+header#Landing nav {
+    text-align: center;
+    margin: 40px 0;
+}
+
+header#Landing nav a {
+    color: var(--maroon);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+header#Landing nav a:before,
+header#Landing nav a:after {
+    background-color: var(--maroon);
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 30px;
+    margin: 0 10px;
+}
+
+header#Landing nav a:hover {
+    background-color: var(--lavender);
+}
+
+/* Main section header styling */
 
 .section-header {
     text-align: center;
